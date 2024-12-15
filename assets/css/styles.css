@@ -1,0 +1,281 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    background-color: #00669F;
+    color: white;
+    width: 100%;
+    z-index: 100;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .descuento {
+    width: 100%;
+    height: 38px;
+    font-size: 18px;
+    background-color: #25c4a5;
+    padding-left: 27px;
+    display: flex;
+    align-items: center;
+}
+
+header .titulo {
+    font-size: 47px;
+    top: 38px;
+    height: 101px;
+    padding-left: 28px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del contenedor principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    padding: 0 20px;
+}
+
+/* Estilo de las tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo general de las tarjetas */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 530px;
+    overflow: hidden;
+}
+
+/* Fondo personalizado para cada tarjeta */
+.card-batman, .card-harley, .card-batman2, .card-harley1 {
+    background-size: cover;
+    background-position: center;
+}
+
+.card-batman {
+    background-image: url('../img/fondobatman.png');
+}
+
+.card-harley {
+    background-image: url('../img/fondoharley.png');
+}
+
+.card-batman2 {
+    background-image: url('../img/fondobatman.png');
+}
+
+.card-harley1 {
+    background-image: url('../img/fondoharley.png');
+}
+
+/* Imagen circular (personaje) */
+.card .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 6px 12px rgba(239, 235, 235, 0.3);
+}
+
+/* Ícono de corazón */
+.card .heart-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/heart.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* Contenido de la tarjeta */
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+}
+
+/* Título */
+.card h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Descripción */
+.card .descripcion {
+    background-color: #F3F3F3;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.card button {
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #00669F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #51a1d0;
+}
+
+/* Estilo del footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #00669F;
+    color: white;
+    position: relative;
+    margin-top: 20px;
+}
+
+footer p {
+    flex: 1;
+    margin: 10px 0;
+}
+
+.github-logo {
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+    margin-top: 10px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 900px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        margin: 10px auto;
+    }
+    header .titulo {
+        font-size: 36px;
+    }
+    header .descuento {
+        background-color: #D1891C;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    main {
+        margin-top: 150px;
+        padding: 0 15px;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+    .card button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    footer {
+        justify-content: space-between; /* Asegura espacio entre texto y logo */
+    }
+    .github-logo {
+        display: block; /* Mostrar en tablets */
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    header .titulo {
+        font-size: 24px;
+        padding-left: 15px;
+    }
+    header .descuento {
+        background-color: #D1891C
+    }
+    main {
+        margin-top: 150px;
+        padding: 0 10px;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .card .card-content {
+        padding: 10px;
+    }
+    .card button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    footer {
+        justify-content: space-between; /* Asegura espacio entre texto y logo */
+    }
+    .github-logo {
+        display: block; /* Mostrar en teléfonos */
+        width: 25px;
+        height: 25px;
+    }
+}
